@@ -1,0 +1,13 @@
+c3p0-version: 0.9.5.2
+oracle: false
+settings:
+  address: 127.0.0.1
+  port: 3306
+  database: javaplugin
+  user: rabbit
+  pword: 123456
+  ssl: true
+c3p0:
+  min: 10
+  add: 10
+  max: 10
