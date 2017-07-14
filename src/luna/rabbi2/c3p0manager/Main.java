@@ -18,8 +18,11 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
 
-        this.saveResource("lib"+ File.separator+"c3p0-0.9.5.2.jar", false);
-        this.saveResource("lib"+File.separator+"mchange-commons-java-0.2.11.jar", false);
+        this.saveResource("c3p0s"+ File.separator+"c3p0-0.9.5.2.jar", false);
+        this.saveResource("c3p0s"+File.separator+"mchange-commons-java-0.2.11.jar", false);
+        if(!new File(this.getDataFolder(), "config.yml").exists()) {
+            saveDefaultConfig();
+        }
 
         // ClassLoader
         if(!ClassLoader.loadClass(this, "c3p0-0.9.5.2.jar")) {
